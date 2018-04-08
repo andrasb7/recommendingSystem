@@ -1,0 +1,21 @@
+<table>
+	<tr>
+		<td><label class="col-sm-2 col-form-label">Username</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" name="userName" required
+					[(ngModel)]="username">
+			</div> <br /> <label class="col-sm-2 col-form-label">Password</label>
+			<div class="col-sm-10">
+				<input type="password" class="form-control" name="password" required
+					[(ngModel)]="password">
+			</div> <br />
+		<td>
+	</tr>
+</table>
+<section class="panel">
+	<form (ngSubmit)="authenticateUser()" class="panel-body">
+		<div class="col-sm-10">
+			<button type="submit" class="btn">Login</button>
+		</div>
+	</form>
+</section>

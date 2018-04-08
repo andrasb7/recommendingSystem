@@ -1,0 +1,63 @@
+<br>
+<div class="col-sm-10">
+	<button (click)="backToSeriesList()" type="button"
+		class="btn btn-primary btn-sm">Back</button>
+</div>
+<br>
+<section *ngIf="series" class="panel">
+	<form #personForm="ngForm" class="panel-body">
+
+		<table>
+			<tr>
+				<td>
+					<div class="col-sm-10">
+						<img alt="Poster" src="{{ series.pictureUrl }}" width="340"
+							height="500">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><br> <label class="col-sm-2 col-form-label">Title</label>
+					<div class="col-sm-10">
+						<input disabled type="text" class="form-control" name="seriesname"
+							required [(ngModel)]="series.name" #personname="ngModel">
+					</div> <br /> <label class="col-sm-2 col-form-label">Runtime</label>
+					<div class="col-sm-10">
+						<input disabled type="number" class="form-control" name="runtime"
+							required [(ngModel)]="series.runtime">
+					</div> <br /> <label class="col-sm-2 col-form-label">Premiere</label>
+					<div class="col-sm-10">
+
+						<input disabled type="text" class="form-control" name="premiere"
+							required [(ngModel)]="series.premiere">
+					</div> <br /> <label class="col-sm-2 col-form-label">Rating</label>
+					<div class="col-sm-10">
+
+						<input disabled type="number" class="form-control" name="rating"
+							required [(ngModel)]="series.avarageRating">
+					</div> <br /></td>
+			</tr>
+		</table>
+		<br />
+	</form>
+</section>
+
+<section class="panel">
+	<div class="col-sm-10">
+		<table>
+			<tr>
+				<th>
+					<form (ngSubmit)="addToFavorite(series.id)" class="panel-body">
+						<button type="submit" class="btn btn-primary">Add</button>
+					</form>
+				</th>
+				<th>
+					<form (ngSubmit)="removeFromFavorites(series.id)"
+						class="panel-body">
+						<button type="submit" class="btn btn-secondary">Remove</button>
+					</form>
+				</th>
+			</tr>
+		</table>
+	</div>
+</section>

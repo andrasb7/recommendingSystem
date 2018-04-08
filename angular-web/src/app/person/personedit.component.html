@@ -1,0 +1,49 @@
+<section *ngIf="person" class = "panel">
+	<form (ngSubmit)="savePersonDetails()" class="panel-body">
+<table>
+	<tr>
+		<td>
+		<label class="col-sm-2 col-form-label">Name</label>
+			<div class="col-sm-10">
+				<input type="text"
+					class="form-control" name="name" required [(ngModel)]="person.name"
+					#personname="ngModel">
+			</div> 
+			<label class="col-sm-2 col-form-label">Surname</label>
+			<div class="col-sm-10">
+				<input type="text"
+					class="form-control" name="surName" required [(ngModel)]="person.surName">
+			</div>
+			<label class="col-sm-2 col-form-label">Password</label>
+						<div class="col-sm-10">
+			 <input
+					type="password" class="form-control" name="password" required
+					[(ngModel)]="person.password">
+			</div> 
+			<label class="col-sm-2 col-form-label">BirthYear</label>
+			<div class="col-sm-10">
+			 <input
+					type="number" class="form-control" name="birthYear" required
+					[(ngModel)]="person.birthYear">
+			</div> 
+<label class="col-sm-2 col-form-label">Nation</label>
+			<div class="col-sm-10">
+			<input type="text"
+					class="form-control" name="nation" required [(ngModel)]="person.nation">
+			</div> 
+			<label class="col-sm-2 col-form-label">Gender</label>
+			<div class="col-sm-10">
+				<select class = "custom-select" name="gender" required [(ngModel)]="person.gender">
+					<option value="M">Male</option>
+					<option value="F">Female</option>
+				</select>
+			</div>
+		<td>
+	</tr>
+</table>
+<div class="col-sm-10">
+<br>
+		<button type="submit" class = "btn">Save</button>
+		</div>
+	</form>
+</section>

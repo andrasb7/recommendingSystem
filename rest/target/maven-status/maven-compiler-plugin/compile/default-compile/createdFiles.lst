@@ -1,0 +1,16 @@
+tvssa\rest\dto\UserDTO.class
+tvssa\rest\servlet\IRestSeriesServlet.class
+tvssa\rest\service\impl\RestSeriesService.class
+tvssa\rest\dto\UserSeriesDTO.class
+tvssa\rest\service\IRestUserService.class
+tvssa\rest\servlet\impl\RestSeriesServlet$2.class
+tvssa\rest\servlet\impl\RestSeriesServlet$1.class
+tvssa\rest\servlet\impl\RestUserServlet.class
+tvssa\rest\servlet\impl\RestSeriesServlet$3.class
+tvssa\rest\servlet\impl\RestSeriesServlet.class
+tvssa\rest\dto\CategoryDTO.class
+tvssa\rest\dto\SeriesDTO.class
+tvssa\rest\service\impl\RestUserService.class
+tvssa\rest\service\IRestSeriesService.class
+tvssa\rest\App.class
+tvssa\rest\servlet\IRestUserServlet.class
